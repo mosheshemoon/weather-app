@@ -1,0 +1,28 @@
+.item-header {
+  display: flex;
+  justify-content: space-between;
+  font-family: monaco;
+  margin-bottom: 15px;
+}
+
+img {
+  height: 30px;
+  width: 30px;
+}
+
+.header-title {
+  font-size: larger;
+}
+
+.header-subtitle {
+  font-size: x-small;
+}
+
+.action-item {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.header-date {
+  font-size: small;
+}

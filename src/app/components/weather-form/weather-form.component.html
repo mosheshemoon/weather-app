@@ -1,0 +1,17 @@
+<div class="item-header">
+  <p>New Widget</p>
+</div>
+<form ngNativeValidate #myform="ngForm" (ngSubmit)="onSubmit(myform)">
+  <div class="input-item">
+    <span>City: </span>
+    <input type="text" [(ngModel)]="city" name="city" required />
+  </div>
+  <div class="input-item">
+    <span>Date: </span>
+    <input type="date" [(ngModel)]="date" name="date" />
+  </div>
+  <div class="item-actions">
+    <button>save</button>
+    <button type="button" (click)="delete()">delete</button>
+  </div>
+</form>

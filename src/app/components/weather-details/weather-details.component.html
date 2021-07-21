@@ -1,0 +1,20 @@
+<div class="item-header">
+  <div>
+    <div class="header-title">{{ weatherItem.title }}</div>
+    <div class="header-subtitle">
+      {{ weatherItem?.weather_state_name }}
+    </div>
+  </div>
+  <img [src]="imgUrl" />
+  <div class="header-date">{{ weatherItem.applicable_date }}</div>
+</div>
+<mat-card-content>
+  <div>
+    temperature: {{ weatherItem.min_temp | number: "2.0-0" }}° -
+    {{ weatherItem.max_temp | number: "2.0-0" }}°
+  </div>
+  <div>humidity: {{ weatherItem.humidity }}%</div>
+</mat-card-content>
+<div class="action-item">
+  <button (click)="toggleEditable()">edit</button>
+</div>

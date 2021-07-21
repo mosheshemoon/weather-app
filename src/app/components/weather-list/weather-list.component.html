@@ -1,0 +1,8 @@
+<div>
+  <app-weather-card
+    *ngFor="let item of weatherService.weatherItems$ | async; let i = index"
+    [weatherItem]="item"
+    [index]="i"
+  ></app-weather-card>
+</div>
+<button (click)="addItem()">+</button>

@@ -1,0 +1,20 @@
+<mat-card class="item-card">
+  <div *ngIf="loading; else ready" class="wrapper">
+    <mat-progress-spinner [mode]="'indeterminate'"></mat-progress-spinner>
+  </div>
+  <ng-template #ready>
+    <app-weather-form
+      *ngIf="editable; else showDetails"
+      (saveItem)="saveItem($event)"
+      (deleteItem)="deleteItem()"
+      [city]="weatherItem.title"
+      [date]="weatherItem.applicable_date"
+    ></app-weather-form>
+  </ng-template>
+  <ng-template #showDetails>
+    <app-weather-details
+      [weatherItem]="weatherItem"
+      (toggle)="toggleEditable()"
+    ></app-weather-details>
+  </ng-template>
+</mat-card>
